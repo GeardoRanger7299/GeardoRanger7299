@@ -1,3 +1,16 @@
-## Hi there 👋
+# Hello, I'm Seth
 
-My name is Seth and after a 2 year hiatus I am currently working towards a degree in Mechanican Engineering. This will be my first coding class and first experience with any coding. My hobbies are building gunpla kits and playing airsoft. I like to play video games in my free time. I decided to take this class to hopefully get a better understanding of the games I play and the parts in my airsoft gear. I am hoping I will have uses for what I learn in this class in the future and maybe I will start to love coding despite all the nightmare stories I hear.
+## About Me
+Currently taking CSC-134 and getting ready to learn C++
+
+## My Foo
+My hobbies are building gunpla kits and playing airsoft. I like to play video games in my free time.
+
+## Currently Learning
+C++
+
+## Fun Fact
+There is a dent in my shin bone
+
+## Find me
+Here on GitHub
