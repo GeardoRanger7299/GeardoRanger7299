@@ -6,3 +6,26 @@ SethG
 This program will greet te users.
 */
 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+}
