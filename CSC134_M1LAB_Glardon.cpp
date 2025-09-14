@@ -16,7 +16,7 @@ int main()
 
     //This program will simulate an apple orchard.
     //The owner's name
-    string name = "Jane Smith";
+    string name = "Seth";
     //Total number of apples owned
     int apples = 100;
     //Price per apple
