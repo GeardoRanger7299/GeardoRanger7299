@@ -33,4 +33,7 @@ int main()
     cout << "Apples are currently $" ;
     cout << pricePerApple << " each." << endl;
 
+    //Final line, to print totalPrice
+    cout << "If you want them all, that will be $" << totalPrice << endl;
+
 }
