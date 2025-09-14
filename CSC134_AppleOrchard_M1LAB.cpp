@@ -23,7 +23,7 @@ int main()
     double pricePerApple = 0.25;
 
     //This will calculate the total price of the apples
-    //TODO
+    double totalPrice = apples * pricePerApple;
 
     //Print all the information about the orchard
     cout << "Welcome to " << name;
