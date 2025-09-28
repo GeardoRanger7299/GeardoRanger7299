@@ -34,11 +34,13 @@ int main()
 
     // Print receipt
     cout << setprecision(2) << fixed;
-    cout << "   1 sub: $" << item_price << endl;
-    cout << "   sales tax: $" << tax_amount << endl;
-    cout << "Your total is $" << total << endl;
+    cout << "********************" << endl;
+    cout << "   Subtotal:" << "\t\t$" << item_price << endl;
+    cout << "   Tax:" << "\t\t\t$" << tax_amount << endl;
+    cout << "   Your total is:" << "\t$" << total << endl;
+    cout << "____________________" << endl;
     cout << "Thank you for your purchase." << endl;
-
+    cout << endl;
 
 
 
