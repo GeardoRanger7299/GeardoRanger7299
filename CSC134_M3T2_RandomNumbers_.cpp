@@ -29,11 +29,14 @@ int main()
 
 
     const int MAX = 6; // Standard D6. Ranges from 1-6
-    int roll = rand() % MAX; // Divide by Max, just keep remainder
+    int roll;
 
+    roll = (rand() % MAX) + 1; // Divide by Max, just keep remainder
     cout << "Your roll was: " << roll << endl;
-    cout << "and: " << rand() % MAX << endl;
-    cout << "and: " << rand() % MAX << endl;
+    roll = (rand() % MAX) + 1;
+    cout << "and: " << roll << endl;
+    roll = (rand() % MAX) + 1;
+    cout << "and: " << roll << endl;
 
 
 
