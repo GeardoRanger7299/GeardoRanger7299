@@ -16,6 +16,8 @@ int main ()
 
     //variables
     string first_name, last_name, short_name; //For customers account name
+    string account_number = "3676124871";
+    const double account_balance = 10342.52;
 
 
 
@@ -28,7 +30,13 @@ int main ()
     cin >> last_name;
     string last_initial = last_name.substr(0, 1);
     short_name = first_name + " " + last_initial + ".";
-    cout << "Hello, " << short_name << " This is your account information."
+    cout << endl;
+    cout << "Hello, " << short_name << " This is your account information." << endl;
+
+    //This will show the account information
+    cout << "- - - - - - - - - - -" << endl;
+    cout << short_name << endl;
+    cout << "Account Number: " << account_number << endl;
 
 
 
@@ -45,5 +53,6 @@ int main ()
 
 
 
+    return 0;
 
 }
