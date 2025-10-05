@@ -20,11 +20,25 @@ int main ()
     cout << "Your choice: ";
     cin >> choice;
 
+
     if (1 == choice) {
         cout << "Wrong choice. Time to sleep." << endl;
     }
     else if (2 == choice) {
-        cout << "Peanuts" << endl;
+        cout << "Good choice. You can now escape. ...However" << endl;
+        cout << "I added a twist to this little game of ours." << endl;
+        cout << "There are 2 keys in the box you chose." << endl;
+        cout << "One one is your freedom and one floods the room with gas." << endl;
+        cout << "1-Big key, 2-Small key. 1 or 2." << endl;
+        cout << "Your choice: ";
+        cin >> choice;
+
+        if (1 == choice){
+            cout << "You made the correct choice." << endl;
+        }
+        else if (2 == choice) {
+            cout << "I had better expectations for you. Too bad." << endl;
+        }
     }
     else if (3 == choice) {
         cout << "You failed to escape." << endl;
