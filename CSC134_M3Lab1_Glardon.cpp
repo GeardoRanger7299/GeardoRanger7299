@@ -12,6 +12,7 @@ int main ()
 
 {
 
+    int choice;
     cout << "Let's play a game." << endl;
     cout << "Before you are 3 boxes." << endl;
     cout << "One box has a key to escape the room and the others trigger sleeping gas." << endl;
@@ -26,7 +27,7 @@ int main ()
         cout << "Peanuts" << endl;
     }
     else if (3 == choice) {
-        cout << "You failed to escape." endl;
+        cout << "You failed to escape." << endl;
     }
     else {
         cout << "This box does not exist. Hurry and pick the correct box!" << endl;
