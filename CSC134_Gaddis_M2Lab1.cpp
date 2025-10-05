@@ -18,6 +18,7 @@ using namespace std;
 int main()
 
 {
+    // output: 0 (no errors)
 
     //Constants for cost and amount charged
     const double Cost_per_cubic_foot = 0.23;
@@ -59,7 +60,7 @@ int main()
     cout << "Charge to customer: $" << Charge << endl;
     cout << "Total profit: $" << Profit << endl;
 
-    
+
     return 0;
 
 }
