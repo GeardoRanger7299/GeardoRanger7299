@@ -3,6 +3,7 @@ CSC134
 M3Lab1 for CSC 134 online class
 SethG
 10/05/2025
+This program will play a game using if statements
 */
 
 #include <iostream>
@@ -12,6 +13,9 @@ int main ()
 
 {
 
+    // output: 0 (no errors)
+
+    //Starts the game and asks user a question then requests input.
     int choice;
     cout << "Let's play a game." << endl;
     cout << "Before you are 3 boxes." << endl;
@@ -20,7 +24,7 @@ int main ()
     cout << "Your choice: ";
     cin >> choice;
 
-
+    //if statements are for decisions based off of users choice.
     if (1 == choice) {
         cout << "Wrong choice. Time to sleep." << endl;
     }
@@ -28,7 +32,7 @@ int main ()
         cout << "Good choice. You can now escape. ...However" << endl;
         cout << "I added a twist to this little game of ours." << endl;
         cout << "There are 2 keys in the box you chose." << endl;
-        cout << "One one is your freedom and one floods the room with gas." << endl;
+        cout << "One is your freedom and one floods the room with gas." << endl;
         cout << "1-Big key, 2-Small key. 1 or 2." << endl;
         cout << "Your choice: ";
         cin >> choice;
@@ -47,7 +51,7 @@ int main ()
         cout << "This box does not exist. Hurry and pick the correct box!" << endl;
     }
     
-    cout << "Thank you for playing my game. Come back soon." << endl;
+    cout << "Thank you for playing my game. I will be seeing you again." << endl;
 
 
 
