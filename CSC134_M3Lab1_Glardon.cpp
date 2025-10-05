@@ -37,11 +37,14 @@ int main ()
         cout << "Your choice: ";
         cin >> choice;
 
-        if (1 == choice){
+        if (1 == choice) {
             cout << "You made the correct choice." << endl;
         }
         else if (2 == choice) {
             cout << "I had better expectations for you. Too bad." << endl;
+        }
+        else {
+            cout << "There are only 2 keys. Choose one or sleep." << endl;
         }
     }
     else if (3 == choice) {
