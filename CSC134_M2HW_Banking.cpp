@@ -37,7 +37,32 @@ int main ()
     cout << "- - - - - - - - - - -" << endl;
     cout << short_name << endl;
     cout << "Account Number: " << account_number << endl;
+    cout << "Current account balance: " << account_balance << endl;
+    cout << endl;
+    
+    //User input
+    int choice;
+    cout << "What would you like to do today?" << endl;
+    cout << "Please type Deposit or Withdrawal." << endl;
+    cout << "Your choice: ";
+    cin >> choice;
 
+    //Calculations for user input will be here
+    //Calculation variables
+    double deposit, //How much being added to the account
+    withdrawal, //How much being taken from the account
+    deposit_end_balance, //Balance after deposit
+    withdrawal_end_balance; //Balance after withdrawal
+
+    //Calculations
+    deposit_end_balance = deposit + account_balance;
+    withdrawal_end_balance = withdrawal + account_balance;
+
+    if (Deposit == choice) {
+        cout << "How much would you like to deposit?"
+        cout << "Deposit: " << endl;
+        cin >> Deposit
+    }
 
 
 
