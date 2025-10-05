@@ -2,7 +2,7 @@
 CSC134
 M2Lab1 for CSC 134 online class
 SethG
-10/04/2025
+10/05/2025
 This program will do claculations for Gener Crates, Inc.
 */
 
