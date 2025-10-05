@@ -26,7 +26,7 @@ int main ()
         cout << "Peanuts" << endl;
     }
     else if (3 == choice) {
-        cout << "You failed to escape."
+        cout << "You failed to escape." endl;
     }
     else {
         cout << "This box does not exist. Hurry and pick the correct box!" << endl;
