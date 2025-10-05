@@ -15,9 +15,10 @@ int main ()
 {
 
     //variables
+    cout << setprecision(2) << fixed << showpoint; // 2 decimal places
     string first_name, last_name, short_name; //For customers account name
     string account_number = "3676124871";
-    const double account_balance = 10342.52;
+    double Account_balance = 10342.52;
 
 
 
@@ -37,15 +38,16 @@ int main ()
     cout << "- - - - - - - - - - -" << endl;
     cout << short_name << endl;
     cout << "Account Number: " << account_number << endl;
-    cout << "Current account balance: " << account_balance << endl;
+    cout << "Current account balance: $" << Account_balance << endl;
     cout << endl;
     
     //User input
     int choice;
     cout << "What would you like to do today?" << endl;
-    cout << "Please type Deposit or Withdrawal." << endl;
+    cout << "Please type 1 for Deposit or 2 for Withdrawal." << endl;
     cout << "Your choice: ";
     cin >> choice;
+
 
     //Calculations for user input will be here
     //Calculation variables
@@ -54,28 +56,34 @@ int main ()
     deposit_end_balance, //Balance after deposit
     withdrawal_end_balance; //Balance after withdrawal
 
+
     //Calculations
-    deposit_end_balance = deposit + account_balance;
-    withdrawal_end_balance = withdrawal + account_balance;
 
-    if (Deposit == choice) {
-        cout << "How much would you like to deposit?"
-        cout << "Deposit: " << endl;
-        cin >> Deposit
+    if (1 == choice) {
+        cout << "How much would you like to deposit?" << endl;
+        cout << "Deposit: ";
+        cin >> deposit;
+        Account_balance += deposit;
+        cout << "Your balance is now: $" << Account_balance << endl;
+        cout << "Thank you for your continued patronage!" << endl;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
+    else if (2 == choice) {
+        cout << "How much would you like to withdraw?" << endl;
+        cout << "Withdrawal: ";
+        cin >> withdrawal;
+        if (withdrawal <= Account_balance) {
+            Account_balance -= withdrawal;
+            cout << "Your balance is now: $" << Account_balance << endl;
+            cout << "Thank you for your continued patronage!" << endl;
+        }
+        else {
+            cout << "Insufficient funds." << endl;
+        }
+    }
+    else {
+        // *** Change 6: Added error handling for invalid choice ***
+        cout << "Invalid choice, please restart process." << endl;
+    }
 
 
     return 0;
