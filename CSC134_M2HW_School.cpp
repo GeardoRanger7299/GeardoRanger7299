@@ -13,6 +13,7 @@ using namespace std;
 int main()
 {
 
+//String variables
 string letsGo,
 school,
 team,
@@ -23,7 +24,7 @@ letsGo = "Let's Go";
 school = "FTCC";
 team = "Trojans";
 
-
+//Creating string concatenantion
 cheerOne = letsGo + " " + school;
 cheerTwo = letsGo + " " + team;
 
