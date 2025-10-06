@@ -8,13 +8,14 @@ This program will do calculations for a pizza party
 
 
 #include <iostream>
+#include <iomanip> //2 Decimal places
 using namespace std;
 
 int main()
 
 {
 
-    string Number_of_pizzas, Slices_per_pizza, Number_of_people;
+    double Number_of_pizzas, Slices_per_pizza, Number_of_people;
 
     cout << "How many pizzas would you like to order?" << endl;
     cout << "Number of pizzas: ";
@@ -31,10 +32,19 @@ int main()
     cin >> Number_of_people;
 
     //Calculations
-    string Total_number_of_slices, Needed_slices, Leftover_slices;
+    double Total_number_of_slices, Needed_slices, Leftover_slices;
     Total_number_of_slices = Number_of_pizzas * Slices_per_pizza;
     Needed_slices = Number_of_people * 3;
-    Leftover_slices = Total_number_of_slices - Needed_slices
+    Leftover_slices = Total_number_of_slices - Needed_slices;
+
+    if (Leftover_slices >= 0) {
+        cout << "There will be " << Leftover_slices;
+        cout << " slices of pizza left over with this amount of pizzas." << endl;
+    }
+    else {
+        cout << "There will be negative leftover slices." << endl;
+        cout << "Please redo data input." << endl;
+    }
 
     return 0;
 
