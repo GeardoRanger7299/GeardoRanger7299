@@ -23,7 +23,7 @@ int main()
     cin >> length_rec_one >> width_rec_one;
 
     cout << "Please enter the length and width of rectangle two," << endl;
-    cout << " separated by a space or new line." << endl;
+    cout << "separated by a space or new line." << endl;
     cin >> length_rec_two >> width_rec_two;
 
     //Calculations based off user input
