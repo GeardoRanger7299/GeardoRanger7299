@@ -23,7 +23,7 @@ int main()
     cin >> number_grade;
     cout << endl;
 
-    //Letter grade based oof number using "if" and "boolean" operations
+    //Letter grade based off number using "if" and "boolean" operations
     if (number_grade >= 90 && number_grade <= 100) {
         cout << "Your letter grade is: A" << endl;
     }
