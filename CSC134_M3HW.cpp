@@ -8,6 +8,8 @@ This program will answer 4 homework questions.
 
 #include <iostream>
 #include <iomanip>
+#include <cmath>
+#include <ctime>
 using namespace std;
 
 int main()
@@ -88,6 +90,36 @@ int main()
     cout << "____________________" << endl;
     cout << "Thank you for your purchase." << endl;
     cout << endl;
+
+    //Third question of the assignment.
+    cout << "Question #3" << endl;
+    //Program for a CYOA(Choose Your Own Adventure) game.
+
+
+    //Fourth question of the assignment.
+    cout << "Question #4" << endl;
+    //Math practice program.
+
+    cout << "Let's do some Math practice." << endl;
+    int seed = time(0);
+    srand(seed);
+
+    const int MAX = 50;
+    int random_1, random_2, total, answer;
+
+    random_1 = (rand() % MAX) + 1; // Divide by Max, just keep remainder
+    random_2 = (rand() % MAX) + 1;
+    total = random_1 + random_2;
+    cout << "What is " << random_1 << " + " << random_2 << "?" << endl;
+    cout << "Answer: ";
+    cin >> answer;
+
+    if (answer == total) {
+        cout << "Congradulations! That is correct!" << endl;
+    }
+    else if (answer != total) {
+        cout << "Sorry. That is not correct" << endl;
+    }
 
 
 
