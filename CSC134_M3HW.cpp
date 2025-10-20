@@ -104,12 +104,14 @@ int main()
     cout << "Option 2 - Feel around for any possible supplies." << endl;
     cout << "Please enter 1 or 2: ";
     cin >> adv_choice;
+    cout << endl;
 
     if (adv_choice == 1) {
         cout << "You wander for hours in the pitch black." << endl;
         cout << "You keep wandering till you start to feel light headed." << endl;
         cout << "You passed out due to excessive blood loss." << endl;
         cout << "You died." << endl;
+        cout << endl;
 
     }
     else if(adv_choice == 2) {
@@ -123,6 +125,7 @@ int main()
         cout << "Option 2 - Start to look for your other supplies" << endl;
         cout << "Please enter 1 or 2: ";
         cin >> adv_choice;
+        cout << endl;
 
         if (adv_choice == 1) {
             cout << "After wandering for a bit you find a cave " << endl;
@@ -133,20 +136,27 @@ int main()
             cout << "thinking of your home." << endl;
             cout << "The magic circle shines to life and teleports " << endl;
             cout << "you to your home safely." << endl;
-            cout << "You live to adventure another day" << endl;
+            cout << "You live to adventure another day." << endl;
+            cout << endl;
         }
         else if (adv_choice ==2) {
             cout << "You start to look for your other supplies." << endl;
             cout << "After a bit you eventuall come across the " << endl;
             cout << "rest of your supplies in a bag." << endl;
-            cout << "You head tou your bag but little did you know" << endl;
+            cout << "You head to your bag but little did you know" << endl;
             cout << " something was hiding in that area." << endl;
             cout << "Due to low visibility and lack of caution, " << endl;
             cout << "a large creature you can't describe attacks you." << endl;
             cout << "You could not defend yourself and died" << endl;
+            cout << endl;
+        }
+
+        else {
+        cout << "Invalid input." << endl;    
 
         }
     }
+
     else {
         cout << "Invalid input." << endl;
     }
@@ -170,6 +180,7 @@ int main()
     cout << "What is " << random_1 << " + " << random_2 << "?" << endl;
     cout << "Answer: ";
     cin >> answer;
+    cout << endl;
 
     if (answer == math_total) {
         cout << "Congradulations! That is correct!" << endl;
