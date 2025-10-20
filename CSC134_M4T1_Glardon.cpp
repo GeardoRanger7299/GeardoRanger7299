@@ -34,6 +34,7 @@ int main()
         num++; //num = num + 1 is alternative
 
     }
+    cout << endl;
 
 
     return 0;
