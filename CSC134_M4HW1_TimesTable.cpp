@@ -1,9 +1,9 @@
 /*
 CSC134
-M3T1 for CSC 134 online class
+M4HW1 Silver
 SethG
-10/26/2025
-This program will build a square using asterisks
+11/02/2025
+This program will create a times table
 */
 
 #include <iostream>
