@@ -13,13 +13,7 @@ int main()
 
 {
     int first_number, second_number, total;
-
     first_number = 5;
-    cout << "Please enter a number." << endl;
-    cout << "Minimum 0 and maximum 12." << endl;
-    cout << "Number: ";
-    cin >> second_number;
-    cout << endl;
 
     do {
         cout << "Please enter a number." << endl;
@@ -28,17 +22,15 @@ int main()
         cin >> second_number;
         cout << endl;
 
-        if (second_number < 0 && second_number > 12) {
+        if (second_number < 0 || second_number > 12) {
             cout << "Invalid. Please enter a valid number" << endl;
         }
     }
 
-    while (second_number >= 0 && second_number <= 12); {
-        for (int j = 1; j <= second_number; j++) {
-            for (int i = 1; i <= 5; i++) {
-                total = first_number * i;
-                cout << j << " times " << i << " is " << total << endl;
-            }
+    while (second_number < 0 || second_number > 12); {
+        for (int i = 1; i <= 5; i++) {
+            total = second_number * i;
+            cout << second_number << " times " << i << " is " << total << endl;
             cout << "------------------------" << endl;
         }
     }
