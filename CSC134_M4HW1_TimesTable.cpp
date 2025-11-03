@@ -13,7 +13,7 @@ int main()
 
 {
     int first_number, second_number, total;
-    first_number = 5;
+    // first_number = 5;
 
     do {
         cout << "Please enter a number." << endl;
