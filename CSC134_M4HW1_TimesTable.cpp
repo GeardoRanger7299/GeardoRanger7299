@@ -27,12 +27,11 @@ int main()
         }
     }
 
-    while (second_number < 0 || second_number > 12); {
-        for (int i = 1; i <= 5; i++) {
-            total = second_number * i;
-            cout << second_number << " times " << i << " is " << total << endl;
-            cout << "------------------------" << endl;
-        }
+    while (second_number < 0 || second_number > 12); 
+    for (int i = 1; i <= 12; i++) {
+        total = second_number * i;
+        cout << second_number << " times " << i << " is " << total << endl;
+        cout << "------------------------" << endl;
     }
 
 
