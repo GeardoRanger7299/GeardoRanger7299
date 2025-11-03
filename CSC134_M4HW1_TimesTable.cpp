@@ -1,6 +1,6 @@
 /*
 CSC134
-M4HW1 Silver
+M4HW1 Gold
 SethG
 11/02/2025
 This program will create a times table
