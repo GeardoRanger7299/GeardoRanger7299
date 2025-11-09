@@ -11,7 +11,9 @@ using namespace std;
 
 void OutputMinutesAsHours (double origMinutes) {
 
-
+    double hours;
+    hours = origMinutes / 60;
+    cout << hours;
 
 }
 
