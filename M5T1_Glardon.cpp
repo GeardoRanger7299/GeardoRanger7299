@@ -7,17 +7,30 @@ This program will be a practice assignment for functions
 */
 
 #include <iostream>
+#include <string>
 using namespace std;
 
-int doubleANumber (int num);
+string formatAnswer (int answer);
+void printAnswer (string msg);
 
-int main() {
-    int number = 4;
-    number = doubleANumber (number);
-    cout << number << endl;
+int main()
+
+{
+    
+    int answer = 5;
+    string message;
+    message = formatAnswer (answer);
+    printAnswer (message);
     return 0;
 }
-int doubleANumber (int num) {
-    num = num * 2;
-    return num;
+
+string formatAnswer (int answer) {
+    string answerMessage;
+    answerMessage = "The answer is ";
+    answerMessage += to_string (answer);
+    return answerMessage;
+}
+
+void printAnswer (string msg) {
+    cout << msg << endl;
 }
