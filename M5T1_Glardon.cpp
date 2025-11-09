@@ -12,7 +12,7 @@ using namespace std;
 int doubleANumber (int num);
 
 int main() {
-    int number = 4
+    int number = 4;
     number = doubleANumber (number);
     cout << number << endl;
     return 0;
