@@ -10,6 +10,10 @@ This program will be a practice assignment for functions
 #include <string>
 using namespace std;
 
+#include <iostream>
+#include <string>
+using namespace std;
+
 string formatAnswer (int answer);
 void printAnswer (string msg);
 
