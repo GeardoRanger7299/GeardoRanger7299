@@ -6,15 +6,6 @@ SethG
 This program will calculate a rectangle using functions
 */
 
-#include <iostream>
-#include <iomanip> //Required for setprecision. 2 decimal places
-using namespace std;
-
-
-double getLength (), getWidth ();
-double getArea (double length, double width);
-void displayData (double length, double width, double area);
-
 /* Original template
 
 int main()
@@ -41,6 +32,15 @@ int main()
    return 0;
 }
 */
+
+#include <iostream>
+#include <iomanip> //Required for setprecision. 2 decimal places
+using namespace std;
+
+
+double getLength (), getWidth ();
+double getArea (double length, double width);
+void displayData (double length, double width, double area);
 int main()
 
 {
@@ -86,6 +86,8 @@ double getArea(double length, double width) {
 void displayData(double length, double width, double area) {
     cout << fixed << setprecision(2); //2 decimal places
 
+    cout << "\t" << "Rectangle dimensions" << endl;
+    cout <<"--------------------------------------" << endl;
     cout << "The length of the triangle: " << "\t" << length << endl;
     cout << "The width of the triangle: " << "\t" << width << endl;
     cout << "The area of the triangle: " << "\t"<< area << endl;
