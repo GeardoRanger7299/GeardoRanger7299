@@ -9,24 +9,21 @@ This program will be the second practice assignment for functions
 #include <iostream>
 using namespace std;
 
-void OutputMinutesAsHours (double origMinutes) {
-
-    double hours;
-    hours = origMinutes / 60;
-    cout << hours;
-
+void printResult (int number, int result) {
+    cout << number << " squared = " << result << endl;
 }
+
 
 int main()
 
 {
 
-    double minutes;
+    int count = 1;
+    int result;
 
-    cin >> minutes;
-
-    OutputMinutesAsHours (minutes);
-    cout << endl;
-
-    return 0;
+    while (count <=10) {
+        result = count *count;
+        printResult (count, result);
+        count++;
+    }
 }
