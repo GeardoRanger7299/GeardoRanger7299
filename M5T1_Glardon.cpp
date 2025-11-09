@@ -1,6 +1,6 @@
 /*
 CSC134
-M3T1 for CSC 134 online class
+M5T1 for CSC 134 online class
 SethG
 11/09/2025
 This program will be a practice assignment for functions
