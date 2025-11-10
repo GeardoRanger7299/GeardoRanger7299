@@ -38,11 +38,11 @@ void search_bag () {
         cout << i + 1 << ". " << equipment[i] << endl;
     }
 
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin.ignore(numeric_limits<streamsize>::max (), '\n');
     cout << "Please enter the item you are searching for: ";
     getline (cin, searchTerm);
 
-    for (int i = 0; i < equipment.size(); ++i) {
+    for (int i = 0; i < equipment.size (); ++i) {
         if (equipment[i] == searchTerm) {
             found = true;
             position = i + 1;
@@ -67,8 +67,8 @@ void display_LP_stat () {
     cout << " LP: " << LP << "/" << max_LP << endl;
 }
 
-void display_traits() {
-    cout << "\t" << "Current Trait Levels ---" << endl;
+void display_traits () {
+    cout << "\t" << "Current Trait Levels" << endl;
     cout << "----------------------------" << endl;
     cout << "Strength: " << strength << endl;
     cout << "Dexterity: " << dexterity << endl;
@@ -111,7 +111,7 @@ void rest_to_recover () {
 
                 if (leveled_up) {
                     cout << "Your stats have increased!" << endl;
-                    display_traits();
+                    display_traits ();
                 } else {
                     cout << "\nYour traits are already at the maximum level!" << endl;
                 }
