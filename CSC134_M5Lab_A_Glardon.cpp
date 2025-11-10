@@ -1,3 +1,13 @@
+/*
+CSC134
+M5LabA
+SethG
+11/09/2025
+This program will do all 3 exercises of M5LabA.
+*/
+
+
+
 #include <iostream>
 #include <string>
 #include <limits>
@@ -11,6 +21,10 @@ const int max_LP = 100;
 const int recover = 10;
 const string current_LP_indic = "*";
 const string missing_LP_indic = "°";
+int strength = 3;
+int dexterity = 4;
+int stamina = 2;
+const int max_trait_lvl = 10;
 
 
 void search_bag () {
@@ -24,8 +38,8 @@ void search_bag () {
         cout << i + 1 << ". " << equipment[i] << endl;
     }
 
-    cout << "Please enter the item you are searching for: ";
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cout << "Please enter the item you are searching for: ";
     getline (cin, searchTerm);
 
     for (int i = 0; i < equipment.size(); ++i) {
@@ -53,6 +67,14 @@ void display_LP_stat () {
     cout << " LP: " << LP << "/" << max_LP << endl;
 }
 
+void display_traits() {
+    cout << "\t" << "Current Trait Levels ---" << endl;
+    cout << "----------------------------" << endl;
+    cout << "Strength: " << strength << endl;
+    cout << "Dexterity: " << dexterity << endl;
+    cout << "Stamina: " << stamina << endl;
+    cout << "----------------------------" << endl;
+}
 void open_bag () {
     cout << "\t" << "Bag contents" << endl;
     cout << "----------------------------" << endl;
@@ -61,8 +83,9 @@ void open_bag () {
 }
 
 void rest_to_recover () {
+    bool trait_leveled = false;
     while (LP < max_LP) {
-        display_LP_stat();
+        display_LP_stat  ();
 
         string choice;
         cout << "Do you want to rest and recover LP?" << endl;
@@ -79,9 +102,24 @@ void rest_to_recover () {
                 LP = max_LP;
             }
             cout << "You recovered " << recover << " LP after a short rest." << endl;
-        } else {
-            cout << "You chose not to rest." << endl;
-            break;
+
+            if (!trait_leveled) {
+                bool leveled_up = false;
+                if (strength < max_trait_lvl) { strength++; leveled_up = true; }
+                if (dexterity < max_trait_lvl) { dexterity++; leveled_up = true; }
+                if (stamina < max_trait_lvl) { stamina++; leveled_up = true; }
+
+                if (leveled_up) {
+                    cout << "Your stats have increased!" << endl;
+                    display_traits();
+                } else {
+                    cout << "\nYour traits are already at the maximum level!" << endl;
+                }
+                trait_leveled = true;
+            } else {
+                cout << "You chose not to rest." << endl;
+                break;
+            }
         }
     }
 
@@ -106,8 +144,9 @@ int main()
         string choice;
         cout << "What would you like to do?" << endl;
         cout << "1. Rest to recover LP. 10 LP per rest." << endl;
-        cout << "2. Open your bag." << endl;
-        cout << "3. Exit game." << endl;
+        cout << "2. View your traits." << endl;
+        cout << "3. Open your bag." << endl;
+        cout << "4. Exit game." << endl;
         cout << "Please choose 1, 2, or 3." << endl;
         cout << "Choice: ";
         cin >> choice;
@@ -116,9 +155,11 @@ int main()
 
         if (choice == "1") {
             rest_to_recover ();
-        } else if (choice == "2") {
-            open_bag ();
+        }  else if (choice == "2") {
+            display_traits ();  
         } else if (choice == "3") {
+            open_bag ();
+        } else if (choice == "4") {
             cout << "Thank you for playing. Goodbye!" << endl;
             break;
         } else {
