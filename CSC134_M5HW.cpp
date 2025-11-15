@@ -47,4 +47,16 @@ int main()
     cout << "Rainfall: ";
     cin >> RainfallMonth_3;
     cout << endl;
+
+    //Rain calculation portion
+    AverageRainfall = (RainfallMonth_1 + RainfallMonth_2 + RainfallMonth_3) / 3.00;
+
+    //Rain calculation results
+    cout << "The average rainfall for the months of" << endl;
+    cout << Month_1 << ", " << Month_2 << ", and " << Month_3;
+    cout << " is " << setprecision(2) << AverageRainfall << " inches." << endl;
+    cout << endl;
+
+    return 0;
+
 }
