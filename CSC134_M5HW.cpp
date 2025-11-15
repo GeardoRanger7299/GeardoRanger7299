@@ -16,6 +16,8 @@ int main()
 
 {
 
+    //Question #1 ----------
+
     //Rain variables
     string Month_1, Month_2, Month_3;
     double RainfallMonth_1, RainfallMonth_2, RainfallMonth_3;
@@ -55,6 +57,36 @@ int main()
     cout << "The average rainfall for the months of" << endl;
     cout << Month_1 << ", " << Month_2 << ", and " << Month_3;
     cout << " is " << setprecision(2) << AverageRainfall << " inches." << endl;
+    cout << endl;
+
+    //Question #2 ----------
+
+    //Cube variables
+    double Length, Width, Height, Volume;
+
+    //Cube data entry length
+    cout << "Please enter the length of the cube." << endl;
+    cout << " Length: ";
+    cin >> Length;
+    cout << endl;
+
+    //Cube data entry Width
+    cout << "Please enter the width of the cube." << endl;
+    cout << " Width: ";
+    cin >> Width;
+    cout << endl;
+
+    //Cube data entry Height
+    cout << "Please enter the Height of the cube." << endl;
+    cout << " Height: ";
+    cin >> Height;
+    cout << endl;
+
+    //Results
+    cout << "Your Length is " << Length << "." << endl;
+    cout << "Your width is " << Width << "." << endl;
+    cout << "Your Height is " << Height << "." << endl;
+    cout << "Total volume of the cube is " << Volume << "." << endl;
     cout << endl;
 
     return 0;
