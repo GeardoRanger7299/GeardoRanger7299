@@ -62,31 +62,58 @@ int main()
     //Question #2 ----------
 
     //Cube variables
-    double Length, Width, Height, Volume;
+    double Length, Width, Height;
 
     //Cube data entry length
-    cout << "Please enter the length of the cube." << endl;
-    cout << " Length: ";
-    cin >> Length;
-    cout << endl;
+    do {
+        cout << "Please enter the length of the cube." << endl;
+        cout << "Length: ";
+        cin >> Length;
+        cout << endl;
+
+        if (Length <= 0) {
+            cout << "Invalid input. Please try again." << endl;
+        }
+    }
+
+    while (Length <= 0);
 
     //Cube data entry Width
-    cout << "Please enter the width of the cube." << endl;
-    cout << " Width: ";
-    cin >> Width;
-    cout << endl;
+    do {
+        cout << "Please enter the width of the cube." << endl;
+        cout << "Width: ";
+        cin >> Width;
+        cout << endl;
+
+        if (Width <= 0) {
+            cout << "Invalid input. Please try again." << endl;
+        }
+    }
+
+    while (Width <= 0);
 
     //Cube data entry Height
-    cout << "Please enter the Height of the cube." << endl;
-    cout << " Height: ";
-    cin >> Height;
-    cout << endl;
+    do {
+        cout << "Please enter the height of the cube." << endl;
+        cout << "Height: ";
+        cin >> Height;
+        cout << endl;
 
-    //Results
-    cout << "Your Length is " << Length << "." << endl;
+        if (Height <= 0) {
+            cout << "Invalid input. Please try again." << endl;
+        }
+    }
+
+    while (Height <= 0);
+
+    //Cube calculations
+    double Volume = Length * Width * Height;
+
+    //Cube results
+    cout << "Your length is " << Length << "." << endl;
     cout << "Your width is " << Width << "." << endl;
-    cout << "Your Height is " << Height << "." << endl;
-    cout << "Total volume of the cube is " << Volume << "." << endl;
+    cout << "Your height is " << Height << "." << endl;
+    cout << "Total volume of the cube is " << setprecision(2) << Volume << "." << endl;
     cout << endl;
 
     return 0;
