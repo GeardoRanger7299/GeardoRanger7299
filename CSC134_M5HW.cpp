@@ -3,7 +3,7 @@ CSC134
 M5HW Gold
 SethG
 11/15/2025
-This program 
+This program will include all 6 questions into one program
 */
 
 #include <iostream>
