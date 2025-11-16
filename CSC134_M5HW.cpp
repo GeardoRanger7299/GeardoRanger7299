@@ -59,6 +59,7 @@ int main()
     cout << " is " << setprecision(2) << AverageRainfall << " inches." << endl;
     cout << endl;
 
+
     //Question #2 ----------
 
     //Cube variables
@@ -116,7 +117,9 @@ int main()
     cout << "Total volume of the cube is " << setprecision(2) << Volume << "." << endl;
     cout << endl;
 
+
     //Question #3 ----------
+
     int Number;
 
 
@@ -174,6 +177,106 @@ int main()
         cout << endl;
         
     }
+
+
+    //Question #4 ----------
+
+    int Calc_Choice;
+    const double PI = 3.14159;
+    double Length_Q4, Width_Q4;
+
+    while (true) {
+        cout << "Geometry Calculator" << endl;
+        cout << "1. Calculate the Area of a Circle." << endl;
+        cout << "2. Calculate the Area of a Rectangle." << endl;
+        cout << "3. Calculate the Area of a Triangle." << endl;
+        cout << "4. Quit" << endl;
+        cout << "Please select your option (1-4)" << endl;
+        cout << "Choice: ";
+        cin >> Calc_Choice;
+        cout << endl;
+
+        if (Calc_Choice == 1) {
+            double Radius;
+            cout << "Please enter the radius of the circle." << endl;
+            cout << "Radius: ";
+            cin >> Radius;
+            cout << endl;
+
+            while (Radius <= 0) {
+                cout << "The radius cannot be 0 or less." << endl;
+                cout << "Please enter the radius of the circle." << endl;
+                cout << "Radius: ";
+                cin >> Radius;
+                cout << endl;
+            }
+            
+            double CircArea = PI * Radius * Radius;
+            cout << "The area of the circle is " << CircArea << "." << endl;
+            cout << endl;
+            break;
+        }
+        else if (Calc_Choice == 2) {
+            cout << "Please enter the length of the rectangle." << endl;
+            cout << "Length: ";
+            cin >> Length_Q4;
+            cout << "Please enter the width of the rectangle." << endl;
+            cout << "Width: ";
+            cin >> Width_Q4;
+            cout << endl;
+
+            while (Length_Q4 <= 0 || Width_Q4 <= 0) {
+                cout << "The input cannot be 0 or less." << endl;
+                cout << "Please enter the length of the rectangle." << endl;
+                cout << "Length: ";
+                cin >> Length_Q4;
+                cout << "Please enter the width of the rectangle." << endl;
+                cout << "Width: ";
+                cin >> Width_Q4;
+                cout << endl;
+            }
+
+            double Area = Length_Q4 * Width_Q4;
+            cout << "The area of the rectangle is " << Area << "." << endl;
+            cout << endl;
+            break;
+        }
+        else if (Calc_Choice == 3) {
+            double Base, Triangle_Height;
+            cout << "Please enter the base of the triangle." << endl;
+            cout << "Base: ";
+            cin >> Base;
+            cout << "Please enter the height of the triangle." << endl;
+            cout << "Height: ";
+            cin >> Triangle_Height;
+            cout << endl;
+
+            while (Base <= 0 || Triangle_Height <= 0) {
+                cout << "The input cannot be 0 or less." << endl;
+                cout << "Please enter the base of the triangle." << endl;
+                cout << "Base: ";
+                cin >> Base;
+                cout << "Please enter the height of the triangle." << endl;
+                cout << "Height: ";
+                cin >> Triangle_Height;
+                cout << endl;
+            }
+
+            double Triangle_Area = Base * Triangle_Height * 0.5;
+            cout << "The area of the triangle is " << Triangle_Area << "." << endl;
+            cout << endl;
+            break;
+        }
+        else if (Calc_Choice == 4) {
+            cout << "Stopping program" << endl;
+            cout << endl;
+            break;
+        }
+    }
+
+        
+
+
 
 
 
