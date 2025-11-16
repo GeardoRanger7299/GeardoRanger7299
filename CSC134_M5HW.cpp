@@ -33,6 +33,9 @@ int main()
         cout << "5.) Travel Distance Calculator" << endl;
         cout << "6.) Exit Program" << endl;
         cout << "Please choose one of the options. (1-6) " << endl;
+        cout << "Choice: ";
+    
+        
 
         if (!(cin >> Menu_Choice)) {
             cout << "Invalid input. Please enter one of the options shown.";
@@ -56,6 +59,7 @@ int main()
         } 
         else if (Menu_Choice == 6) {
             cout << "Exiting program."<< endl;
+            cout << endl;
             return 0;
         } 
         else {
@@ -185,46 +189,57 @@ void Question_3 () {
         cout << "Please enter a number. (1 - 10)" << endl;
         cout << "Number: ";
         cin >> Number;
+        cout << endl;
 
         //Results
         if (Number == 1) {
             cout << "The roman numeral equivalent of " << Number << " is I." << endl;
+            cout << endl;
             break;
         }
         else if (Number == 2) {
             cout << "The roman numeral equivalent of " << Number << " is II." << endl;
+            cout << endl;
             break;
         }
         else if (Number == 3) {
             cout << "The roman numeral equivalent of " << Number << " is III." << endl;
+            cout << endl;
             break;
         }
         else if (Number == 4) {
             cout << "The roman numeral equivalent of " << Number << " is IV." << endl;
+            cout << endl;
             break;
         }
         else if (Number == 5) {
             cout << "The roman numeral equivalent of " << Number << " is V." << endl;
+            cout << endl;
             break;
         }
         else if (Number == 6) {
             cout << "The roman numeral equivalent of " << Number << " is VI." << endl;
+            cout << endl;
             break;
         }
         else if (Number == 7) {
             cout << "The roman numeral equivalent of " << Number << " is VII." << endl;
+            cout << endl;
             break;
         }
         else if (Number == 8) {
             cout << "The roman numeral equivalent of " << Number << " is VIII." << endl;
+            cout << endl;
             break;
         }
         else if (Number == 9) {
             cout << "The roman numeral equivalent of " << Number << " is IX." << endl;
+            cout << endl;
             break;
         }
         else if (Number == 10) {
             cout << "The roman numeral equivalent of " << Number << " is X." << endl;
+            cout << endl;
             break;
         }
         else {
