@@ -122,15 +122,13 @@ int main()
 
     int Number;
 
-
-    
-    
+    //User input
     while (true) {
         cout << "Please enter a number. (1 - 10)" << endl;
         cout << "Number: ";
         cin >> Number;
 
-
+        //Results
         if (Number == 1) {
             cout << "The roman numeral equivalent of " << Number << " is I." << endl;
             break;
@@ -274,12 +272,47 @@ int main()
         }
     }
 
-        
+
+    //Question #5 ----------
 
 
+    double Speed;
+    int Hours;
 
+    //Speed input
+    cout << "What is the speed of the vehicle in mph?" << endl;
+    cout << "Speed: ";
+    cin >> Speed;
+    cout << endl;
+    while (Speed <= 0) {
+        cout << "The speed cannot be 0 or less." << endl;
+        cout << "Speed: " << endl;
+        cin >> Speed;
+        cout << endl;
+    }
 
+    //Time input
+    cout << "How many hours has the vehicle traveled?" << endl;
+    cout << "Hours: ";
+    cin >> Hours;
+    cout << endl;
+    while (Hours < 1) {
+        cout << "The Hours must be at least 1." << endl;
+        cout << "Hours: ";
+        cin >> Hours;
+        cout << endl;
+    }
 
+    //Table setup
+    cout << "\n" << "Hours" << "\t\t" << "Distance Traveled" << "\n";
+    cout << "--------------------------------" << endl;
+
+    //Calculations and data layout
+    for (int NewHours = 1; NewHours <= Hours; ++NewHours) {
+        double Distance = Speed * NewHours;
+        cout << NewHours << "\t\t" << Distance << endl;
+        cout << endl;
+    }
     return 0;
 
 }
