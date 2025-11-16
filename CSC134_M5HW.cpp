@@ -116,48 +116,51 @@ int main()
     cout << "Total volume of the cube is " << setprecision(2) << Volume << "." << endl;
     cout << endl;
 
+    //Question #3 ----------
     int Number;
 
     cout << "Please enter a number. (1 - 10)" << endl;
     cout << "Number: ";
     cin >> Number;
 
-    if (Number = 0) {
-        cout << "There is no roman numeral equivalent for 0."<< endl;
-        cout << "Please try again." << endl;
-    }
-    else if (Number = 1) {
-        cout << "The roman numeral equivalent of " << Number << " is I." << endl;
-    }
-    else if (Number = 2) {
-        cout << "The roman numeral equivalent of " << Number << " is II." << endl;
-    }
-    else if (Number = 3) {
-        cout << "The roman numeral equivalent of " << Number << " is III." << endl;
-    }
-    else if (Number = 4) {
-        cout << "The roman numeral equivalent of " << Number << " is IV." << endl;
-    }
-    else if (Number = 5) {
-        cout << "The roman numeral equivalent of " << Number << " is V." << endl;
-    }
-    else if (Number = 6) {
-        cout << "The roman numeral equivalent of " << Number << " is VI." << endl;
-    }
-    else if (Number = 7) {
-        cout << "The roman numeral equivalent of " << Number << " is VII." << endl;
-    }
-    else if (Number = 8) {
-        cout << "The roman numeral equivalent of " << Number << " is VIII." << endl;
-    }
-    else if (Number = 9) {
-        cout << "The roman numeral equivalent of " << Number << " is IX." << endl;
-    }
-    else if (Number = 10) {
-        cout << "The roman numeral equivalent of " << Number << " is X." << endl;
-    }
-    else {
-        cout << "Invalid input. Please try again." << endl;
+    
+    
+    while (true) {
+        if (Number == 1) {
+            cout << "The roman numeral equivalent of " << Number << " is I." << endl;
+        }
+        else if (Number == 2) {
+            cout << "The roman numeral equivalent of " << Number << " is II." << endl;
+        }
+        else if (Number == 3) {
+            cout << "The roman numeral equivalent of " << Number << " is III." << endl;
+        }
+        else if (Number == 4) {
+            cout << "The roman numeral equivalent of " << Number << " is IV." << endl;
+        }
+        else if (Number == 5) {
+            cout << "The roman numeral equivalent of " << Number << " is V." << endl;
+        }
+        else if (Number == 6) {
+            cout << "The roman numeral equivalent of " << Number << " is VI." << endl;
+        }
+        else if (Number == 7) {
+            cout << "The roman numeral equivalent of " << Number << " is VII." << endl;
+        }
+        else if (Number == 8) {
+            cout << "The roman numeral equivalent of " << Number << " is VIII." << endl;
+        }
+        else if (Number == 9) {
+            cout << "The roman numeral equivalent of " << Number << " is IX." << endl;
+        }
+        else if (Number == 10) {
+            cout << "The roman numeral equivalent of " << Number << " is X." << endl;
+            break;
+        }
+        else {
+            cout << "Invalid input. Please try again." << endl;
+        }
+        
     }
 
 
