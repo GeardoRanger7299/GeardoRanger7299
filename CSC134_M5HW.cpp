@@ -9,14 +9,64 @@ This program
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <limits>
+
+void Question_1 ();
+void Question_2 ();
+void Question_3 ();
+void Question_4 ();
+void Question_5 ();
 
 using namespace std;
 
 int main()
 
 {
+    int Menu_Choice = 0;
+
+    while (true) {
+        cout << "[-----] Main Menu [-----]" << endl;
+        cout << "1.) Average Rainfall Calculator" << endl;
+        cout << "2.) Cube Volume Calculator" << endl;
+        cout << "3.) Roman Number Converter" << endl;
+        cout << "4.) Geometry Calculator" << endl;
+        cout << "5.) Travel Distance Calculator" << endl;
+        cout << "6.) Exit Program" << endl;
+        cout << "Please choose one of the options. (1-6) " << endl;
+
+        if (!(cin >> Menu_Choice)) {
+            cout << "Invalid input. Please enter one of the options shown.";
+            continue;
+        }
+
+        if (Menu_Choice == 1) {
+            Question_1 ();
+        } 
+        else if (Menu_Choice == 2) {
+            Question_2 ();
+        } 
+        else if (Menu_Choice == 3) {
+            Question_3 ();
+        } 
+        else if (Menu_Choice == 4) {
+            Question_4 ();
+        } 
+        else if (Menu_Choice == 5) {
+            Question_5 ();
+        } 
+        else if (Menu_Choice == 6) {
+            cout << "Exiting program."<< endl;
+            return 0;
+        } 
+        else {
+            cout << "Invalid choice. Please enter a number between 1 and 6." << endl;
+        }
+    }
+}
+void Question_1 () { 
 
     //Question #1 ----------
+    cout << "[-----] Average Rainfall Calculator [-----]" << endl;
 
     //Rain variables
     string Month_1, Month_2, Month_3;
@@ -56,11 +106,15 @@ int main()
     //Rain calculation results
     cout << "The average rainfall for the months of" << endl;
     cout << Month_1 << ", " << Month_2 << ", and " << Month_3;
-    cout << " is " << setprecision(2) << AverageRainfall << " inches." << endl;
+    cout << " is " << fixed << setprecision(2) << AverageRainfall << " inches." << endl;
     cout << endl;
+} //Q1 end
 
 
+void Question_2 () {
+    
     //Question #2 ----------
+    cout << "[-----] Cube Volume Calculator [-----]" << endl;
 
     //Cube variables
     double Length, Width, Height;
@@ -114,11 +168,15 @@ int main()
     cout << "Your length is " << Length << "." << endl;
     cout << "Your width is " << Width << "." << endl;
     cout << "Your height is " << Height << "." << endl;
-    cout << "Total volume of the cube is " << setprecision(2) << Volume << "." << endl;
+    cout << "Total volume of the cube is " << fixed << setprecision(2) << Volume << "." << endl;
     cout << endl;
+}//Q2 end
 
+
+void Question_3 () {
 
     //Question #3 ----------
+    cout << "[-----] Roman Number Converter [-----]" << endl;
 
     int Number;
 
@@ -175,9 +233,13 @@ int main()
         cout << endl;
         
     }
+}//Q3 end
 
+
+void Question_4 () {
 
     //Question #4 ----------
+    cout << "[-----] Geometry Calculator [-----]" << endl;
 
     int Calc_Choice;
     const double PI = 3.14159;
@@ -271,10 +333,13 @@ int main()
             break;
         }
     }
+}
 
+
+void Question_5 () {
 
     //Question #5 ----------
-
+    cout << "[-----] Travel Distance Calculator [-----]" << endl;
 
     double Speed;
     int Hours;
@@ -313,6 +378,7 @@ int main()
         cout << NewHours << "\t\t" << Distance << endl;
         cout << endl;
     }
-    return 0;
-
 }
+
+
+
