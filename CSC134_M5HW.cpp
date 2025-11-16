@@ -119,39 +119,50 @@ int main()
     //Question #3 ----------
     int Number;
 
-    cout << "Please enter a number. (1 - 10)" << endl;
-    cout << "Number: ";
-    cin >> Number;
 
     
     
     while (true) {
+        cout << "Please enter a number. (1 - 10)" << endl;
+        cout << "Number: ";
+        cin >> Number;
+
+
         if (Number == 1) {
             cout << "The roman numeral equivalent of " << Number << " is I." << endl;
+            break;
         }
         else if (Number == 2) {
             cout << "The roman numeral equivalent of " << Number << " is II." << endl;
+            break;
         }
         else if (Number == 3) {
             cout << "The roman numeral equivalent of " << Number << " is III." << endl;
+            break;
         }
         else if (Number == 4) {
             cout << "The roman numeral equivalent of " << Number << " is IV." << endl;
+            break;
         }
         else if (Number == 5) {
             cout << "The roman numeral equivalent of " << Number << " is V." << endl;
+            break;
         }
         else if (Number == 6) {
             cout << "The roman numeral equivalent of " << Number << " is VI." << endl;
+            break;
         }
         else if (Number == 7) {
             cout << "The roman numeral equivalent of " << Number << " is VII." << endl;
+            break;
         }
         else if (Number == 8) {
             cout << "The roman numeral equivalent of " << Number << " is VIII." << endl;
+            break;
         }
         else if (Number == 9) {
             cout << "The roman numeral equivalent of " << Number << " is IX." << endl;
+            break;
         }
         else if (Number == 10) {
             cout << "The roman numeral equivalent of " << Number << " is X." << endl;
@@ -160,6 +171,7 @@ int main()
         else {
             cout << "Invalid input. Please try again." << endl;
         }
+        cout << endl;
         
     }
 
