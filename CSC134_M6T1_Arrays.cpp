@@ -42,7 +42,14 @@ void Part_1() {
         do {
             cout << "Day " << day << ": ";
             cin >> Total_Cars_Day;
+            if (Total_Cars_Day < 0); {
+                cout << "The total cars cannot be negative. That would be an anomaly." << endl;
+                cout << "Please try again. ";
+
+            }
         }
+        while (Total_Cars_Day < 0);
+        Total_Cars += Total_Cars_Day;
     }
 
     double Average_Total_Cars = (double) Total_Cars / Total_Days;
@@ -50,17 +57,6 @@ void Part_1() {
     cout << "The average total of cars: " << Average_Total_Cars;
 }
     
-
-    while (count < SIZE) {
-        cout << "Day " << count << ": ";
-        cin >> poke_today;
-        poke_total += poke_today;
-        count++; // Move to next day
-    }
-    cout << "Total = " << poke_total << endl;
-    poke_avg = (double) poke_total / SIZE;
-    cout << "Average = " << poke_avg << endl;
-}
 
 void Part_2() {
     // Method 2 uses two arrays:
