@@ -19,6 +19,8 @@ void Part_2();
 
 // main
 int main() {
+
+    cout << fixed << setprecision(2);
     
     Part_1(); //No arrays
     cout << "------------------------------------------------------" << endl;
@@ -85,21 +87,22 @@ void Part_2() {
 
     double Average_Total_Cars = (double) Total_Cars / Total_Days;
 
-    cout << "Day       Average total cars";
-    cout << "------------------------------------------------";
+    cout << "Day" << "\t\t" << "Average total cars" << endl;
+    cout << "----------------------------------" << endl;
     for (int i = 0; i < Total_Days; i++) {
-        cout << Name_of_Day [i] << " " << Cars_Per_Day [i] << endl;
+        cout << Name_of_Day [i] << "\t\t" << Cars_Per_Day [i] << endl;
     }
 
     cout << "The total cars counted: " << Total_Cars << endl;
     cout << "The average total of cars: " << Average_Total_Cars << endl;
 
     //This will be the attempted bar chart portion of the assignment.
+    cout << "1# = 10 cars" << endl;
     const int Scale = 10;
-    const int Width = 12;
+    
 
     for (int i = 0; i < Total_Days; i++) {
-        cout << setw (Width) << Name_of_Day [i] << " | ";
+        cout << "\t" << Name_of_Day [i] << " | ";
         int hashtags = Cars_Per_Day [i] / Scale;
         for (int j = 0; j < hashtags; j++) {
             cout << "#";
