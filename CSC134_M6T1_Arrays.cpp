@@ -7,32 +7,49 @@ This program will cover basic arrays using cars
 */
 
 #include <iostream>
+#include <string>
+#include <iomanip>
+#include <vector>
+
 using namespace std;
 
 // Function Declarations
-void method1();
-void method2();
+void Part_1();
+void Part_2();
 
 // main
 int main() {
     // Count # of Pokemon per day, two different ways
-    method1();
-    method2();
+    Part_1(); //No arrays
+    cout << "------------------------------------------------------" << endl;
+    Part_2(); //Arrays
 
     return 0;
 }
 
 // function definitions
-void method1() {
+void Part_1() {
     // Method one - no arrays
-    // Count 5 days Pokemon, get total and average
-    cout << "Enter each Pokemon found per day." << endl;
-    cout << "Day 0 = Monday, Day 4 = Friday" << endl;
-    const int SIZE = 5;
-    int count = 0;
-    int poke_today;     // current value, to add
-    int poke_total = 0; // add up 
-    double poke_avg = 0;// average
+    const int Total_Days = 5;
+    int Total_Cars = 0;
+
+    cout << "Please enter the amount of cars for each day." << endl;
+    cout << "The days will be Monday through Friday." << endl;
+    cout << "Total cars for the day: ";
+
+    for (int day = 1; day <= Total_Days; day++) {
+        int Total_Cars_Day;
+        do {
+            cout << "Day " << day << ": ";
+            cin >> Total_Cars_Day;
+        }
+    }
+
+    double Average_Total_Cars = (double) Total_Cars / Total_Days;
+    cout << "The total cars counted: " << Total_Cars;
+    cout << "The average total of cars: " << Average_Total_Cars;
+}
+    
 
     while (count < SIZE) {
         cout << "Day " << count << ": ";
@@ -45,7 +62,7 @@ void method1() {
     cout << "Average = " << poke_avg << endl;
 }
 
-void method2() {
+void Part_2() {
     // Method 2 uses two arrays:
     // Names of the days
     // # pokemon found on the days
