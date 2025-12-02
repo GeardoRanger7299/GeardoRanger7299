@@ -19,7 +19,7 @@ void Part_2();
 
 // main
 int main() {
-    // Count # of Pokemon per day, two different ways
+    
     Part_1(); //No arrays
     cout << "------------------------------------------------------" << endl;
     Part_2(); //Arrays
@@ -35,16 +35,15 @@ void Part_1() {
 
     cout << "Please enter the amount of cars for each day." << endl;
     cout << "The days will be Monday through Friday." << endl;
-    cout << "Total cars for the day: ";
 
     for (int day = 1; day <= Total_Days; day++) {
         int Total_Cars_Day;
         do {
-            cout << "Day " << day << ": ";
+            cout << "Total cars for day " << day << ": ";
             cin >> Total_Cars_Day;
             if (Total_Cars_Day < 0); {
                 cout << "The total cars cannot be negative. That would be an anomaly." << endl;
-                cout << "Please try again. ";
+                cout << "Please try again." << endl;
 
             }
         }
@@ -53,8 +52,8 @@ void Part_1() {
     }
 
     double Average_Total_Cars = (double) Total_Cars / Total_Days;
-    cout << "The total cars counted: " << Total_Cars;
-    cout << "The average total of cars: " << Average_Total_Cars;
+    cout << "The total cars counted: " << Total_Cars << endl;
+    cout << "The average total of cars: " << Average_Total_Cars << endl;
 }
     
 
@@ -66,15 +65,16 @@ void Part_2() {
     string Name_of_Day [Total_Days] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
 
     cout << "Please enter the amount of cars for each day." << endl;
+    cout << "The days will be Monday through Friday." << endl;
 
     for (int i = 0; i < Total_Days; i++) {
         int Total_Cars_Day;
         do {
-            cout << Name_of_Day [i] << "; ";
+            cout << Name_of_Day [i] << ": ";
             cin >> Total_Cars_Day;
             if (Total_Cars_Day < 0) {
                 cout << "The total cars cannot be negative. That would be an anomaly." << endl;
-                cout << "Please try again. ";
+                cout << "Please try again." << endl;
             }
             
         }
@@ -82,5 +82,30 @@ void Part_2() {
             Cars_Per_Day [i] = Total_Cars_Day;
             Total_Cars += Cars_Per_Day [i];
     }
+
+    double Average_Total_Cars = (double) Total_Cars / Total_Days;
+
+    cout << "Day       Average total cars";
+    cout << "------------------------------------------------";
+    for (int i = 0; i < Total_Days; i++) {
+        cout << Name_of_Day [i] << " " << Cars_Per_Day [i] << endl;
+    }
+
+    cout << "The total cars counted: " << Total_Cars << endl;
+    cout << "The average total of cars: " << Average_Total_Cars << endl;
+
+    //This will be the attempted bar chart portion of the assignment.
+    const int Scale = 10;
+    const int Width = 12;
+
+    for (int i = 0; i < Total_Days; i++) {
+        cout << setw (Width) << Name_of_Day [i] << " | ";
+        int hashtags = Cars_Per_Day [i] / Scale;
+        for (int j = 0; j < hashtags; j++) {
+            cout << "#";
+        }
+        cout << Cars_Per_Day [i] << " cars" << endl;
+    }
+
     
 }
