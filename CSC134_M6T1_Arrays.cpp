@@ -60,18 +60,26 @@ void Part_1() {
 
 void Part_2() {
     // Method 2 uses two arrays:
-    // Names of the days
-    // # pokemon found on the days
+    const int Total_Days = 5;
+    vector<int> Cars_Per_Day (Total_Days);
+    int Total_Cars = 0;
+    string Name_of_Day [Total_Days] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
 
-    const int SIZE = 5;
-    string days[SIZE] = {"M", "T", "W", "Th", "F"}; // initialized
-    int pokemon[SIZE]; // not initialized
-    int poke_total = 0;
-    double poke_avg = 0.0;
+    cout << "Please enter the amount of cars for each day." << endl;
 
-    for (int i=0; i < SIZE; i++) {
-        cout << "# on " << days[i] << ": ";
-        cin >> pokemon[i];
+    for (int i = 0; i < Total_Days; i++) {
+        int Total_Cars_Day;
+        do {
+            cout << Name_of_Day [i] << "; ";
+            cin >> Total_Cars_Day;
+            if (Total_Cars_Day < 0) {
+                cout << "The total cars cannot be negative. That would be an anomaly." << endl;
+                cout << "Please try again. ";
+            }
+            while (Total_Cars_Day < 0);
+            Cars_Per_Day [i] = Total_Cars_Day;
+            Total_Cars += Cars_Per_Day [i];
+        }
     }
     // print output in "tabular" (table) format
     cout << "Day\tPokemon" << endl;
