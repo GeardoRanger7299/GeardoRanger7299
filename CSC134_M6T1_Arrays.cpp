@@ -54,6 +54,7 @@ void Part_1() {
     }
 
     double Average_Total_Cars = (double) Total_Cars / Total_Days;
+    cout << endl;
     cout << "The total cars counted: " << Total_Cars << endl;
     cout << "The average total of cars: " << Average_Total_Cars << endl;
 }
@@ -87,27 +88,32 @@ void Part_2() {
 
     double Average_Total_Cars = (double) Total_Cars / Total_Days;
 
-    cout << "Day" << "\t\t" << "Average total cars" << endl;
+    cout << endl;
+    cout << "\t" << "Day" << "\t" << "Average total cars" << endl;
     cout << "----------------------------------" << endl;
     for (int i = 0; i < Total_Days; i++) {
-        cout << Name_of_Day [i] << "\t\t" << Cars_Per_Day [i] << endl;
+        cout << setw (12) << Name_of_Day [i] << setw (8) << Cars_Per_Day [i] << endl;
     }
 
+    cout << endl;
     cout << "The total cars counted: " << Total_Cars << endl;
     cout << "The average total of cars: " << Average_Total_Cars << endl;
+    cout << endl;
 
     //This will be the attempted bar chart portion of the assignment.
-    cout << "1# = 10 cars" << endl;
+    cout << "-- Bar Chart (1# = 10 cars) --" << endl;
+    cout << "----------------------------------" << endl;
     const int Scale = 10;
+    const int Width = 12;
     
 
     for (int i = 0; i < Total_Days; i++) {
-        cout << "\t" << Name_of_Day [i] << " | ";
+        cout << setw (Width) << Name_of_Day [i] << " | ";
         int hashtags = Cars_Per_Day [i] / Scale;
         for (int j = 0; j < hashtags; j++) {
             cout << "#";
         }
-        cout << Cars_Per_Day [i] << " cars" << endl;
+        cout << " (" << Cars_Per_Day [i] << " cars)" << endl;
     }
 
     
