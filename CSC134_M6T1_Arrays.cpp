@@ -41,7 +41,7 @@ void Part_1() {
         do {
             cout << "Total cars for day " << day << ": ";
             cin >> Total_Cars_Day;
-            if (Total_Cars_Day < 0); {
+            if (Total_Cars_Day < 0) {
                 cout << "The total cars cannot be negative. That would be an anomaly." << endl;
                 cout << "Please try again." << endl;
 
