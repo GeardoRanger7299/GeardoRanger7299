@@ -76,21 +76,11 @@ void Part_2() {
                 cout << "The total cars cannot be negative. That would be an anomaly." << endl;
                 cout << "Please try again. ";
             }
-            while (Total_Cars_Day < 0);
+            
+        }
+        while (Total_Cars_Day < 0);
             Cars_Per_Day [i] = Total_Cars_Day;
             Total_Cars += Cars_Per_Day [i];
-        }
     }
-    // print output in "tabular" (table) format
-    cout << "Day\tPokemon" << endl;
-    for (int i=0; i < SIZE; i++) {
-        cout << days[i] << "\t" << pokemon[i] << endl;
-        // find the total
-        poke_total += pokemon[i];
-    }
-    // find total, print results
-    poke_avg = (double) poke_total / SIZE;
-    cout << "Total = " << poke_total << endl;
-    cout << "Average = " << poke_avg << endl;
-
+    
 }
