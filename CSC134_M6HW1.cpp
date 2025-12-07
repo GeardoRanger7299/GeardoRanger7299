@@ -36,3 +36,24 @@ void New_Londo_Ruins ();
 void Undead_Burg ();
 void Age_of_Fire_Ending ();
 void Age_of_Dark_Ending ();
+
+
+int main()
+
+{
+
+cout << "An old voice rings out to you in the darkness." << endl;
+cout << "It tells you a tale of the first fire and how humanity came into possession of it" << endl;
+cout << "Humanity waged war against the ancient dragons and started the age of fire." << endl;
+cout << "This age would not last long. The fire was fading. Darkness was encroaching." << endl;
+cout << "What little light that remains is only embers." << endl;
+cout << "Amongst the living in humanity are carriers branded by a sign. The dark soul." << endl;
+cout << "They seek the remaining embers of fire to keep the darkness away." << endl;
+cout << "You are one of these branded mortals. Forever cursed to seek fire." << endl;
+cout << "With the fires dying, what will you do?" << endl;
+cout << endl;
+
+
+
+
+}
