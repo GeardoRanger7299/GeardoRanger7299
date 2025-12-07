@@ -96,6 +96,50 @@ void Undead_Burg () {
     int choice;
 
     cout << "-{Undead Burg}-" << endl;
+    cout << "The air is cold and filled with the stench of decaying hollows wandering aimlessly." << endl;
+    cout << "You cut down a hollow with your battered sword." << endl;
+    cout << " You gain a bit of humanity after slaying the hollow." << endl;
+    if (Humanity < Max_Humanity) Humanity ++;
+    cout << "Humanity level is now: " << Humanity << endl;
+    cout << endl;
+
+    cout << "Two paths lay before you." << endl;
+    cout << "1. Return to the Firelink Shrine." << endl;
+    cout << "2. Venture deeper into the Burg." << endl;
+    cout << "What will you do?" << endl;
+    cout << "Choice: ";
+    cin >> choice;
+
+    if (choice == 1) {
+        Firelink_Shrine ();
+    }
+    else if (choice == 2) {
+        if (Humanity >= 2) {
+            cout << "You venture deeper into the burg." << endl;
+            cout << "After a bit you enter a large room with a glowing pit." << endl;
+            cout << "The door closes behind you and a large demon made from dark flames emerges from the pit." << endl;
+            cout << "After a long battle you finally kill the demon." << endl;
+            cout << "Upon its defeat it drops two items, ahomeward bone and its boss soul" << endl;
+            cout << "After picking these items up you use the homeward bone to return to the Firelink Shrine." << endl;
+            
+            Firelink_Shrine ();
+        }
+        else {
+            cout << "You venture deeper into the burg." << endl;
+            cout << "After a bit you enter a large room with a glowing pit." << endl;
+            cout << "The door closes behind you and a large demon made from dark flames emerges from the pit." << endl;
+            cout << "Shortly into the battle you became overwhelmed and the demon gave you a swift end." << endl;
+            cout << "Your humanity was lacking." << endl;
+            cout << "YOU DIED" << endl;
+            Firelink_Shrine ();
+        }
+    }
+    else {
+        cout << "You strayed from the path which lead to a dead end." << endl;
+        cout << "Return to the Fireling Shrine." << endl;
+        Firelink_Shrine ();
+    }
+
 }
 
 }
