@@ -23,11 +23,11 @@ and a little easier to do I will only be "Humanity" and "Boss souls"
 similar to that of the 1st game
 */
 int Humanity = 0;
-const int Max_Humanity = 10;
+const int Max_Humanity = 5;
 bool Boss_Soul = false;
 /*
 Even though the max humanity in DS1 is 99, for
-simplicity in the program the max will be 10
+simplicity in the program the max will be 5
 */
 
 
@@ -51,7 +51,7 @@ cout << "What little light that remains is only embers." << endl;
 cout << "Amongst the living in humanity are carriers branded by a sign. The dark soul." << endl;
 cout << "They seek the remaining embers of fire to keep the darkness away." << endl;
 cout << "You are one of these branded mortals. Forever cursed to seek fire." << endl;
-cout << "With the fires dying, what will you do?" << endl;
+cout << "With the fire dying, what will you do?" << endl;
 cout << endl;
 
 cout << "You awaken at the Firelink Shrine next to a bonfire. The flame is faded" << endl;
@@ -60,8 +60,18 @@ cout << "This statue appeared to depict two bodies fused together into an abomin
 cout << "One pointed North while the other Pointed South." << endl;
 cout << "There is a white soapstone sign at the bottom." << endl;
 cout << "It says North to Undead Burg and South to City Ruins." << endl;
-
+cout << endl;
+Firelink_Shrine ();
 return 0;
+}
+
+void clear_input () {
+    if (cin.fail ()) {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "Invalid input. Please enter a number choice." << endl;
+    }
+}
 
 void Firelink_Shrine () {
 
@@ -76,6 +86,8 @@ void Firelink_Shrine () {
     cout << "What will you do?" << endl;
     cout << "Choice: ";
     cin >> choice;
+    cout << endl;
+    clear_input();
 
     if (choice == 1) {
         Undead_Burg ();
@@ -110,6 +122,8 @@ void Undead_Burg () {
     cout << "What will you do?" << endl;
     cout << "Choice: ";
     cin >> choice;
+    cout << endl;
+    clear_input();
 
     if (choice == 1) {
         Firelink_Shrine ();
@@ -120,9 +134,10 @@ void Undead_Burg () {
             cout << "After a bit you enter a large room with a glowing pit." << endl;
             cout << "The door closes behind you and a large demon made from dark flames emerges from the pit." << endl;
             cout << "After a long battle you finally kill the demon." << endl;
-            cout << "Upon its defeat it drops two items, ahomeward bone and its boss soul" << endl;
+            cout << "Upon its defeat it drops two items, a homeward bone and its boss soul" << endl;
             cout << "After picking these items up you use the homeward bone to return to the Firelink Shrine." << endl;
-
+            Boss_Soul = true;
+            cout << endl;
             Firelink_Shrine ();
         }
         else {
@@ -132,12 +147,14 @@ void Undead_Burg () {
             cout << "Shortly into the battle you became overwhelmed and the demon gave you a swift end." << endl;
             cout << "Your humanity was lacking." << endl;
             cout << "YOU DIED" << endl;
+            cout << endl;
             Firelink_Shrine ();
         }
     }
     else {
         cout << "You strayed from the path which lead to a dead end." << endl;
         cout << "Return to the Fireling Shrine." << endl;
+        cout << endl;
         Firelink_Shrine ();
     }
 }
@@ -148,10 +165,12 @@ void New_Londo_Ruins () {
 
     cout << "-{New Londo Ruins}-" << endl;
     cout << "The forgotten city, flooded and haunted by ghosts that phase through your blade." << endl;
+    cout << endl;
 
     if (!Boss_Soul) {
         cout << "You cannot harm the ghosts without first attaining great demonic power." << endl;
         cout << "You have no choice but to retreat." << endl;
+        cout << endl;
         Firelink_Shrine ();
     }
     else {
@@ -163,6 +182,7 @@ void New_Londo_Ruins () {
         if (Humanity < Max_Humanity) Humanity ++;
         cout << "The void suddenly drags you in and you become unconcious." << endl;
         cout << "After a bit you wake up at the Alter of the First Flame." << endl;
+        cout << endl;
         First_Flame_Altar ();
     }
 }
@@ -183,6 +203,8 @@ void First_Flame_Altar () {
     cout << "2. Let the fire die (Embrace the darkness)" << endl;
     cout << "Choice: ";
     cin >> choice;
+    cout << endl;
+    clear_input();
 
     if (choice == 1) {
         Age_of_Fire_Ending ();
@@ -216,5 +238,6 @@ void Age_of_Dark_Ending () {
     else {
         cout << "You embraced the darkness but without full humanity you are left to wander." << endl;
         cout << "You will forever wander this ruined world, hollow and wanting." << endl;
+        cout << "The cycle is broken for now." << endl;
     }
 }
