@@ -28,3 +28,11 @@ const int Max_Humanity = 10;
 Even though the max humanity in DS1 is 99, for
 simplicity in the program the max will be 10
 */
+
+
+void Bonfire ();
+void Firelink_Shrine ();
+void New_Londo_Ruins ();
+void Undead_Burg ();
+void Age_of_Fire_Ending ();
+void Age_of_Dark_Ending ();
