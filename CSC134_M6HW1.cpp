@@ -225,6 +225,7 @@ void Age_of_Fire_Ending () {
     cout << "The fire envelops you and you burn to ash." << endl;
     cout << "With the fire haveing more fuel it grows." << endl;
     cout << "Light fills the world and the cycle continues." << endl;
+    cout << endl;
 }
 
 void Age_of_Dark_Ending () {
@@ -234,10 +235,12 @@ void Age_of_Dark_Ending () {
     if (Humanity == Max_Humanity) {
         cout << "In this age of darkness you have risen to the top and became the Dark Lord." << endl;
         cout << "You will usher in a new era and lead humanity through these dark times." << endl;
+        cout << endl;
     }
     else {
         cout << "You embraced the darkness but without full humanity you are left to wander." << endl;
         cout << "You will forever wander this ruined world, hollow and wanting." << endl;
         cout << "The cycle is broken for now." << endl;
+        cout << endl;
     }
 }
