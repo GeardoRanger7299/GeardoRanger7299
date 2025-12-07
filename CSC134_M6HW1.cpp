@@ -34,7 +34,7 @@ simplicity in the program the max will be 10
 void Firelink_Shrine ();
 void New_Londo_Ruins ();
 void Undead_Burg ();
-void First_Flame_Alter ();
+void First_Flame_Altar ();
 void Age_of_Fire_Ending ();
 void Age_of_Dark_Ending ();
 
@@ -72,7 +72,7 @@ void Firelink_Shrine () {
     cout << "Humanity level: " << Humanity << "/" << Max_Humanity << endl;
     cout << "1. Head North to the Undead Burg." << endl;
     cout << "2. Head South to the city ruins." << endl;
-    cout << "3. Head to the Alter of the First Flame." << endl;
+    cout << "3. Head to the Altar of the First Flame." << endl;
     cout << "What will you do?" << endl;
     cout << "Choice: ";
     cin >> choice;
@@ -84,7 +84,7 @@ void Firelink_Shrine () {
         New_Londo_Ruins ();
     }
     else if (choice == 3) {
-        First_Flame_Alter ();
+        First_Flame_Altar ();
     }
     else {
         cout << "Your will wavers. Forge your path";
@@ -163,12 +163,40 @@ void New_Londo_Ruins () {
         if (Humanity < Max_Humanity) Humanity ++;
         cout << "The void suddenly drags you in and you become unconcious." << endl;
         cout << "After a bit you wake up at the Alter of the First Flame." << endl;
-        void First_Flame_Alter ();
+        First_Flame_Altar ();
     }
 }
 
-void First_Flame_Alter () {
-    cout << "-{Alter of the First Flame}-" << endl;
+void First_Flame_Altar () {
+
+    int choice;
+
+    cout << "-{Altar of the First Flame}-" << endl;
+    cout << "You find yourself in the Alter of the First Flame." << endl;
+    cout << "At the end of the room you see a flickering weak fire." << endl;
+    cout << "The first flame. The very thing that started everything in this messed up world." << endl;
+    cout << "What will you do?" << endl;
+    cout << "Will you offer yourself to link the fire and give it the fuel to go on?" << endl;
+    cout << "Or will you let the fire die and bring about the darkness?" << endl;
+    cout << "The fate of the world rests on this decision." << endl;
+    cout << "1. Link the fire (Preserve the age of fire)" << endl;
+    cout << "2. Let the fire die (Embrace the darkness)" << endl;
+    cout << "Choice: ";
+    cin >> choice;
+
+    if (choice == 1) {
+        First_Flame_Altar ();
+    }
+    else if (choice == 2) {
+        Age_of_Dark_Ending ();
+    }
+    else {
+        cout << "This is a heavy choice. Every passing moment the flame grows weaker." << endl;
+        First_Flame_Altar ();
+    }
+
 }
 
+void First_Flame_Altar () {
+    
 }
