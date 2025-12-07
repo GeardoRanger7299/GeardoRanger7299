@@ -53,7 +53,11 @@ cout << "You are one of these branded mortals. Forever cursed to seek fire." << 
 cout << "With the fires dying, what will you do?" << endl;
 cout << endl;
 
-
-
+cout << "You awaken at the Firelink Shrine next to a bonfire. The flame is faded" << endl;
+cout << "Upon looking around you notice a decrepid statue." << endl;
+cout << "This statue appeared to depict two bodies fused together into an abomination." << endl;
+cout << "One pointed North while the other Pointed South." << endl;
+cout << "There is a white soapstone sign at the bottom." << endl;
+cout << "It say North to Undead Burg and South to City Ruins." << endl;
 
 }
