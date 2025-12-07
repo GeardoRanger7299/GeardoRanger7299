@@ -185,7 +185,7 @@ void First_Flame_Altar () {
     cin >> choice;
 
     if (choice == 1) {
-        First_Flame_Altar ();
+        Age_of_Fire_Ending ();
     }
     else if (choice == 2) {
         Age_of_Dark_Ending ();
@@ -197,6 +197,24 @@ void First_Flame_Altar () {
 
 }
 
-void First_Flame_Altar () {
-    
+void Age_of_Fire_Ending () {
+    cout << "***{Age of Fire}***" << endl;
+    cout << "You offer yourself to the fire." << endl;
+    cout << "The fire envelops you and you burn to ash." << endl;
+    cout << "With the fire haveing more fuel it grows." << endl;
+    cout << "Light fills the world and the cycle continues." << endl;
+}
+
+void Age_of_Dark_Ending () {
+    cout << "***{Age of Darkness}***" << endl;
+    cout << "You let the fire die out bringing about an age of darkness." << endl;
+    cout << "There is no more light and humanity is now to forever walk the lands as hollows." << endl;
+    if (Humanity == Max_Humanity) {
+        cout << "In this age of darkness you have risen to the top and became the Dark Lord." << endl;
+        cout << "You will usher in a new era and lead humanity through these dark times." << endl;
+    }
+    else {
+        cout << "You embraced the darkness but without full humanity you are left to wander." << endl;
+        cout << "You will forever wander this ruined world, hollow and wanting." << endl;
+    }
 }
