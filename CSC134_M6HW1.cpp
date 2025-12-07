@@ -1,6 +1,6 @@
 /*
 CSC134
-M6HW1 for CSC 134 online class
+M6HW1 Gold
 SethG
 12/07/2025
 This program will be a choose your own adventure game in the
