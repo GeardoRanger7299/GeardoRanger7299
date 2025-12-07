@@ -24,16 +24,17 @@ similar to that of the 1st game
 */
 int Humanity = 0;
 const int Max_Humanity = 10;
+bool Boss_Soul = false;
 /*
 Even though the max humanity in DS1 is 99, for
 simplicity in the program the max will be 10
 */
 
 
-void Bonfire ();
 void Firelink_Shrine ();
 void New_Londo_Ruins ();
 void Undead_Burg ();
+void First_Flame_Alter ();
 void Age_of_Fire_Ending ();
 void Age_of_Dark_Ending ();
 
@@ -58,7 +59,7 @@ cout << "Upon looking around you notice a decrepid statue." << endl;
 cout << "This statue appeared to depict two bodies fused together into an abomination." << endl;
 cout << "One pointed North while the other Pointed South." << endl;
 cout << "There is a white soapstone sign at the bottom." << endl;
-cout << "It say North to Undead Burg and South to City Ruins." << endl;
+cout << "It says North to Undead Burg and South to City Ruins." << endl;
 
 return 0;
 
@@ -71,7 +72,7 @@ void Firelink_Shrine () {
     cout << "Humanity level: " << Humanity << "/" << Max_Humanity << endl;
     cout << "1. Head North to the Undead Burg." << endl;
     cout << "2. Head South to the city ruins." << endl;
-    cout << "3. " << endl;
+    cout << "3. Head to the Alter of the First Flame." << endl;
     cout << "What will you do?" << endl;
     cout << "Choice: ";
     cin >> choice;
@@ -83,7 +84,7 @@ void Firelink_Shrine () {
         New_Londo_Ruins ();
     }
     else if (choice == 3) {
-        
+        First_Flame_Alter ();
     }
     else {
         cout << "Your will wavers. Forge your path";
@@ -98,7 +99,7 @@ void Undead_Burg () {
     cout << "-{Undead Burg}-" << endl;
     cout << "The air is cold and filled with the stench of decaying hollows wandering aimlessly." << endl;
     cout << "You cut down a hollow with your battered sword." << endl;
-    cout << " You gain a bit of humanity after slaying the hollow." << endl;
+    cout << "You gain a bit of humanity after slaying the hollow." << endl;
     if (Humanity < Max_Humanity) Humanity ++;
     cout << "Humanity level is now: " << Humanity << endl;
     cout << endl;
@@ -121,7 +122,7 @@ void Undead_Burg () {
             cout << "After a long battle you finally kill the demon." << endl;
             cout << "Upon its defeat it drops two items, ahomeward bone and its boss soul" << endl;
             cout << "After picking these items up you use the homeward bone to return to the Firelink Shrine." << endl;
-            
+
             Firelink_Shrine ();
         }
         else {
@@ -139,7 +140,35 @@ void Undead_Burg () {
         cout << "Return to the Fireling Shrine." << endl;
         Firelink_Shrine ();
     }
+}
 
+void New_Londo_Ruins () {
+
+    int choice;
+
+    cout << "-{New Londo Ruins}-" << endl;
+    cout << "The forgotten city, flooded and haunted by ghosts that phase through your blade." << endl;
+
+    if (!Boss_Soul) {
+        cout << "You cannot harm the ghosts without first attaining great demonic power." << endl;
+        cout << "You have no choice but to retreat." << endl;
+        Firelink_Shrine ();
+    }
+    else {
+        cout << "After absorbing the soul of the demon, you are now able to harm the ghosts." << endl;
+        cout << "You fight your way through the ruins going deeper and deeper." << endl;
+        cout << "Eventually you come across a dark void." << endl;
+        cout << "The coid calls to you. You reach out and touch it." << endl;
+        cout << "You gain a bit of humanity after touching the void." << endl;
+        if (Humanity < Max_Humanity) Humanity ++;
+        cout << "The void suddenly drags you in and you become unconcious." << endl;
+        cout << "After a bit you wake up at the Alter of the First Flame." << endl;
+        void First_Flame_Alter ();
+    }
+}
+
+void First_Flame_Alter () {
+    cout << "-{Alter of the First Flame}-" << endl;
 }
 
 }
