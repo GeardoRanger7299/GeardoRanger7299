@@ -1,0 +1,1 @@
+1. My code is messing up even though I am including cin.ignore(numeric_limits<streamsize>::max(), '\n');. What am I missing?
